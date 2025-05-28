@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.lang.ScopedValue;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserRepo extends JpaRepository<Users, Integer> {
@@ -14,4 +16,6 @@ public interface UserRepo extends JpaRepository<Users, Integer> {
     Long countUsersByCompanyId(@Param("companyId") Long companyId);
 
     List<Users> findByCompanyId(Long companyId);
+
+    Optional<Users> findByEmail(String email);
 }

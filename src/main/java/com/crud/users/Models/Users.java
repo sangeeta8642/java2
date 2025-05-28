@@ -21,7 +21,7 @@ public class Users {
     @Email(message = "Please enter valid email")
     private String email;
 
-    @NotNull
+
     private String password;
 
     public String getPassword() {
@@ -34,6 +34,14 @@ public class Users {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     @ManyToOne
     @JoinColumn(name = "company_id", nullable = false)
