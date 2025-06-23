@@ -2,7 +2,7 @@ package com.crud.users.DTOs;
 
 public class LoginDTO {
     private String email;
-    private String username;
+//    private String username;
     private String password;
     // getters and setters
 
@@ -14,13 +14,13 @@ public class LoginDTO {
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
+//    public String getUsername() {
+//        return username;
+//    }
+//
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
 
     public String getPassword() {
         return password;
